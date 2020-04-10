@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@kantup/nx-graphql": ["libs/nx-graphql/src/index.ts"]
+      "@kantup/nx-express-graphql": ["libs/nx-express-graphql/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

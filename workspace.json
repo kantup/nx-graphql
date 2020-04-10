@@ -1,9 +1,9 @@
 {
   "version": 1,
   "projects": {
-    "nx-graphql": {
-      "root": "libs/nx-graphql",
-      "sourceRoot": "libs/nx-graphql/src",
+    "nx-express-graphql": {
+      "root": "libs/nx-express-graphql",
+      "sourceRoot": "libs/nx-express-graphql/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -11,43 +11,43 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/nx-graphql/.eslintrc",
+            "config": "libs/nx-express-graphql/.eslintrc",
             "tsConfig": [
-              "libs/nx-graphql/tsconfig.lib.json",
-              "libs/nx-graphql/tsconfig.spec.json"
+              "libs/nx-express-graphql/tsconfig.lib.json",
+              "libs/nx-express-graphql/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/nx-graphql/**"]
+            "exclude": ["**/node_modules/**", "!libs/nx-express-graphql/**"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/nx-graphql/jest.config.js",
-            "tsConfig": "libs/nx-graphql/tsconfig.spec.json",
+            "jestConfig": "libs/nx-express-graphql/jest.config.js",
+            "tsConfig": "libs/nx-express-graphql/tsconfig.spec.json",
             "passWithNoTests": true
           }
         },
         "build": {
           "builder": "@nrwl/node:package",
           "options": {
-            "outputPath": "dist/libs/nx-graphql",
-            "tsConfig": "libs/nx-graphql/tsconfig.lib.json",
-            "packageJson": "libs/nx-graphql/package.json",
-            "main": "libs/nx-graphql/src/index.ts",
+            "outputPath": "dist/libs/nx-express-graphql",
+            "tsConfig": "libs/nx-express-graphql/tsconfig.lib.json",
+            "packageJson": "libs/nx-express-graphql/package.json",
+            "main": "libs/nx-express-graphql/src/index.ts",
             "assets": [
-              "libs/nx-graphql/*.md",
+              "libs/nx-express-graphql/*.md",
               {
-                "input": "./libs/nx-graphql/src",
+                "input": "./libs/nx-express-graphql/src",
                 "glob": "**/*.!(ts)",
                 "output": "./src"
               },
               {
-                "input": "./libs/nx-graphql",
+                "input": "./libs/nx-express-graphql",
                 "glob": "collection.json",
                 "output": "."
               },
               {
-                "input": "./libs/nx-graphql",
+                "input": "./libs/nx-express-graphql",
                 "glob": "builders.json",
                 "output": "."
               }
@@ -56,19 +56,19 @@
         }
       }
     },
-    "nx-graphql-e2e": {
+    "nx-express-graphql-e2e": {
       "projectType": "application",
-      "root": "apps/nx-graphql-e2e",
-      "sourceRoot": "apps/nx-graphql-e2e/src",
+      "root": "apps/nx-express-graphql-e2e",
+      "sourceRoot": "apps/nx-express-graphql-e2e/src",
       "architect": {
         "e2e": {
           "builder": "@nrwl/nx-plugin:e2e",
           "options": {
-            "target": "nx-graphql:build",
-            "npmPackageName": "@kantup/nx-graphql",
-            "pluginOutputPath": "dist/libs/nx-graphql",
-            "jestConfig": "apps/nx-graphql-e2e/jest.config.js",
-            "tsSpecConfig": "apps/nx-graphql-e2e/tsconfig.spec.json"
+            "target": "nx-express-graphql:build",
+            "npmPackageName": "@kantup/nx-express-graphql",
+            "pluginOutputPath": "dist/libs/nx-express-graphql",
+            "jestConfig": "apps/nx-express-graphql-e2e/jest.config.js",
+            "tsSpecConfig": "apps/nx-express-graphql-e2e/tsconfig.spec.json"
           }
         }
       }

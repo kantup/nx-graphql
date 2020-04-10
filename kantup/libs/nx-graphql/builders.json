@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "build": {
+      "implementation": "./src/builders/nx-graphql/builder",
+      "schema": "./src/builders/nx-graphql/schema.json",
+      "description": "nx-graphql builder"
+    }
+  }
+}

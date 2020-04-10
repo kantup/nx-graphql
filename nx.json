@@ -19,12 +19,12 @@
     }
   },
   "projects": {
-    "nx-graphql": {
+    "nx-express-graphql": {
       "tags": []
     },
-    "nx-graphql-e2e": {
+    "nx-express-graphql-e2e": {
       "tags": [],
-      "implicitDependencies": ["nx-graphql"]
+      "implicitDependencies": ["nx-express-graphql"]
     }
   }
 }
